@@ -11,12 +11,14 @@ void Repo::add_produs(const Produs& p)
 	this->produse[this->n++] = p;
 }
 
-void Repo::update_produs(const Produs& p, char* n, char* d, int pret)
+void Repo::update_produs( Produs& p, char* nume, char* data, int pret)
 {
 	int i = find_produs(p);
-	produse[i].set_nume(n);
-	produse[i].set_data(d);
-	produse[i].set_pret(pret);
+	if (i != -1) {
+		produse[i].set_nume(nume);
+		produse[i].set_data(data);
+		produse[i].set_pret(pret);
+	}
 
 }
 void Repo::delete_produs(const Produs& p)
@@ -30,12 +32,12 @@ void Repo::delete_produs(const Produs& p)
 		}
 	}
 }
-int Repo::find_produs(const Produs& p)
+int Repo::find_produs( Produs& p)
 {
 	int i;
 	for ( i = 0; i < n; i++)
 	{
-		if (produse[i] == p)
+		if (strcmp(produse[i].get_nume (), p.get_nume())==0)
 			return i;
 	}
 	return -1;

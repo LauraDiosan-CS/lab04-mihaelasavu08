@@ -9,9 +9,9 @@ public:
 	Repo();
 	void add_produs(const Produs&);
 	void delete_produs(const Produs&);
-	void update_produs(const Produs&, char*, char*, int);
+	void update_produs( Produs&, char*, char*, int);
 	Produs* get_all();
-	int find_produs(const Produs&);
+	int find_produs( Produs&);
 	~Repo();
 	int size();
 };

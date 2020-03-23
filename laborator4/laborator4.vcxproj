@@ -148,11 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="laborator4.cpp" />
+    <ClCompile Include="meniu.cpp" />
     <ClCompile Include="produs.cpp" />
     <ClCompile Include="repo.cpp" />
     <ClCompile Include="teste.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="meniu.h" />
     <ClInclude Include="produs.h" />
     <ClInclude Include="repo.h" />
     <ClInclude Include="teste.h" />

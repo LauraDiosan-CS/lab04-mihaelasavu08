@@ -84,6 +84,6 @@ Produs::~Produs() {
 }
 ostream& operator<<(ostream& os, const Produs& p)
 {
-	os << "Produs - " << p.nume << "-" << p.data << "-" << p.pret;
+	os << "produs:" << p.nume << "," << p.data << "," << p.pret;
 	return os;
 }

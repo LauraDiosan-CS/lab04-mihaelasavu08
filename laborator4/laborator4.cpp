@@ -12,8 +12,8 @@ int main() {
 	Teste();
 	show_menu();
 	Produs produse[100];
-	Repo rep;
-	int n = rep.size();
+	Repo list;
+	int n = list.size();
 	int com = 1;
 	while (com)
 	{
@@ -31,14 +31,14 @@ int main() {
 			cin >> pret;
 			Produs p1(nume, data, pret);
 			produse[n++] = p1;
-			rep.add_produs(p1);
+			list.add_produs(p1);
 		}
 		if (com == 2)
 		{
 			int i;
-			for ( i = 0; i < rep.size(); i++)
+			for ( i = 0; i < list.size(); i++)
 			{
-				cout << rep.get_all()[i] << endl;
+				cout << list.get_all()[i] << endl;
 			}
 		}
 	
@@ -58,7 +58,7 @@ int main() {
 			int pret_nou;
 			cout << "pret nou: " << endl;
 			cin >> pret_nou;
-			rep.update_produs(p, nume_nou, data_nou, pret_nou);
+			list.update_produs(p, nume_nou, data_nou, pret_nou);
 		}
 		if (com == 4)
 		{
@@ -67,7 +67,7 @@ int main() {
 			cout << " nume produs de sters: " << endl;
 			cin >> nume;
 			Produs p(nume, data, pret);
-			rep.delete_produs(p);
+			list.delete_produs(p);
 		}
 		if (com == 0)
 			break;
