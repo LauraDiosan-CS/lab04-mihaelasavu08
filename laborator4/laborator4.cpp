@@ -2,28 +2,22 @@
 #include "produs.h"
 #include "teste.h"
 #include "repo.h"
+#include "meniu.h"
 
 using namespace std;
 
-void show_menu() {
-	cout << "0. iesire" << endl;
-	cout << "1. adaugare produs" << endl;
-	cout << "2. afisare produse " << endl;
-	cout << "3. modificare produs" << endl;
-	cout << "4. stergere produs" << endl;
-	
 
-}
 
 int main() {
 	Teste();
+	show_menu();
 	Produs produse[100];
 	Repo rep;
 	int n = rep.size();
 	int com = 1;
 	while (com)
 	{
-		show_menu();
+	
 		cout << "introduceti comanda: " << endl;
 		cin >> com;
 		if (com == 1) {
